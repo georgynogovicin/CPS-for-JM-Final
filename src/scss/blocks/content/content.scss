@@ -1,0 +1,56 @@
+.content {
+    background-color: $background-fill-color;
+    padding-top: 24px;
+    padding-left: 16px;
+
+    &__title {
+        margin: 0;
+        font-family: TT Lakes;
+        font-size: 28px;
+        line-height: 40px;
+        position: relative;
+        &::before {
+            content: "";
+            width: 5px;
+            height: 40px;
+            background-color: $decoration-elements-color;
+            border-radius: 0 15px 15px 0;
+            position: absolute;
+            left: -16px;
+            top: 0px;
+            
+        }
+    }
+    &__menu-list {
+        margin: 0;
+        padding: 24px 0 0 0;
+        display: flex;
+        justify-content: flex-start;
+        list-style-type: none;
+        overflow: auto;
+    }
+    
+
+    &__menu-link {
+        display: block;
+        box-sizing: border-box;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-family: TT Lakes;
+        font-size: 16px;
+        line-height: 24px;
+        color: $content-menu-item-text-color;
+        letter-spacing: -0.2px;
+        text-align: center;
+        white-space: nowrap;
+        border: 2px solid transparent;
+        &:hover {
+            border: 2px solid $decoration-elements-color;
+            border-radius: 6px;
+            background-color: white;
+        }
+        &:active {
+            background-color: $decoration-elements-color;
+        }
+    }
+}

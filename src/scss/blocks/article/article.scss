@@ -1,0 +1,40 @@
+.article {
+    background-color: $background-fill-color;
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+        padding-left: 16px;
+    }
+
+    &__wrapper {
+        max-height: 4em;
+        overflow: hidden;
+        transition-duration: 400ms;
+        &--expanded {
+            transition-duration: 400ms;
+            max-height: 16em;
+        }
+    }
+
+    &__paragraph {
+        margin: 0;
+        padding: 12px 0;
+        font-family: TT Lakes;
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: $content-block-text-color;  
+    }
+
+    .btn-read-more {
+        margin-left: 16px;
+        margin-bottom: 16px;
+    }
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+
+}

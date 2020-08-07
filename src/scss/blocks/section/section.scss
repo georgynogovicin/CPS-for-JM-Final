@@ -1,0 +1,36 @@
+.section {
+    &__header {
+        background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);;
+        padding: 16px;
+    }
+
+    &__title {
+        font-family: TT Lakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-transform: uppercase;
+        color: $section-item-text-color;
+        font-weight: 200;
+    }
+
+    &__item {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        background-color: white;
+        border: 1px solid $section-item-border-color;
+        border-radius: 5%;
+        padding: 10px 20px;
+        width: 224px;
+        height: 72px;
+        box-sizing: border-box;
+        &:hover {
+            transition-duration: 300ms;
+            filter: drop-shadow(0 0 0.75rem $red-round-buttons-fill-color);
+        }
+        
+    }
+}
