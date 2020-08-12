@@ -1,0 +1,25 @@
+.brands {
+    &__container {
+        height: 130px;
+    }
+
+    &__item {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        background-color: white;
+        border: 1px solid $section-item-border-color;
+        border-radius: 5%;
+        padding: 10px 20px;
+        width: 224px !important;
+        height: 72px !important;
+        box-sizing: border-box;
+        &:hover {
+            transition-duration: 300ms;
+            filter: drop-shadow(0 0 0.75rem $red-round-buttons-fill-color);
+        }
+        
+    }
+}

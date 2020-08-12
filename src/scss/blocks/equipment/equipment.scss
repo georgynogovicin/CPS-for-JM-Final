@@ -1,0 +1,26 @@
+.equipment {
+
+    &__container {
+        height: 260px;
+    }
+
+    &__item {
+        width: 240px !important;
+        height: 160px !important;
+        padding: 16px;
+        margin-top: 24px;
+        
+        display: flex;
+
+        
+        background-color: white;
+        border: 1px solid $section-item-border-color;
+        border-radius: 5%;
+
+
+        .white-round-button {
+            align-self: flex-end;
+        }
+    }
+    
+}

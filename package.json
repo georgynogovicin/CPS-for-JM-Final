@@ -1,47 +1,54 @@
 {
-  "name": "webpack-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "7.5.5",
-    "autoprefixer": "9.6.1",
-    "babel-loader": "8.0.6",
-    "copy-webpack-plugin": "5.1.0",
-    "css-loader": "3.2.0",
-    "file-loader": "4.2.0",
-    "gh-pages": "2.1.1",
-    "html-webpack-plugin": "3.2.0",
-    "mini-css-extract-plugin": "0.8.0",
-    "node-sass": "^4.14.1",
-    "postcss-loader": "3.0.0",
-    "sass-loader": "7.2.0",
-    "webpack": "4.41.2",
-    "webpack-cli": "3.3.7",
-    "webpack-dev-server": "^3.11.0"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
+    "name": "cps-for-jm",
+    "version": "1.0.0",
+    "description": "",
+    "main": "script.js",
+    "keywords": [],
+    "author": "georgynogovicin",
+    "license": "ISC",
+    "dependencies": {
+        "img-loader": "^3.0.1",
+        "loading-attribute-polyfill": "^1.5.4",
+        "svg-url-loader": "^6.0.0",
+        "swiper": "^6.0.4",
+        "url-loader": "^4.1.0"
+    },
+    "devDependencies": {
+        "@babel/core": "7.10.5",
+        "@babel/preset-env": "7.10.4",
+        "autoprefixer": "9.8.5",
+        "babel-loader": "8.1.0",
+        "copy-webpack-plugin": "6.0.3",
+        "css-loader": "3.6.0",
+        "file-loader": "6.0.0",
+        "gh-pages": "3.1.0",
+        "html-webpack-plugin": "4.3.0",
+        "mini-css-extract-plugin": "0.9.0",
+        "node-sass": "^4.14.1",
+        "postcss-loader": "3.0.0",
+        "sass-loader": "9.0.2",
+        "style-loader": "^1.2.1",
+        "webpack": "4.43.0",
+        "webpack-cli": "3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    },
+    "postcss": {
+        "plugins": {
+            "autoprefixer": {}
+        }
+    },
+    "browserslist": [
+        "last 2 versions",
+        "Firefox ESR",
+        "not OperaMini All",
+        "not dead"
+    ],
+    "scripts": {
+        "dev": "webpack --mode development",
+        "build": "webpack --mode production",
+        "watch": "webpack --mode development --watch",
+        "start": "webpack-dev-server --mode development --open",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     }
-  },
-  "browserslist": [
-    "last 2 versions",
-    "Firefox ESR",
-    "not OperaMini All",
-    "not dead"
-  ],
-  "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch",
-    "start": "webpack-dev-server --mode development --open",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "dependencies": {}
 }

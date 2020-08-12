@@ -1,10 +1,14 @@
 @import 'normalize.css';
+@import './blocks/swiper/swiper.scss';
 @import './variables/variables';
 @import './buttons/buttons.scss';
 @import './blocks/header-menu/header-menu.scss';
 @import './blocks/content/content.scss';
 @import './blocks/article/article.scss';
-@import './blocks/section/section';
+@import './blocks/section/section.scss';
+@import './blocks/brands/brands.scss';
+@import './blocks/equipment/equipment.scss';
+@import './blocks/prices/prices';
 // @import './fonts/fonts.scss';
 
 
