@@ -4,7 +4,7 @@
     }
 
     &__item {
-        margin-top: 24px;
+        margin: 12px 12px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -21,5 +21,25 @@
             filter: drop-shadow(0 0 0.75rem $red-round-buttons-fill-color);
         }
         
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .brands {
+        &__container {
+            height: 100%;
+        }
+
+        &__list {
+            height: 190px !important;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+       .btn-read-more {
+           margin: 20px 32px;
+       }
     }
 }

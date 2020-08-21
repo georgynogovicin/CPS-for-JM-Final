@@ -41,3 +41,83 @@
         }
     }
 }
+@media (min-width: $tablet-width) {
+    .header-menu {
+        &__feedback {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+            padding-right: 20px;
+        }
+
+        .logo {
+            padding: 0 22px;
+        }
+
+        &__left-part {
+            justify-content: space-between;
+            &::before {
+                content: "";
+                width: 2px;
+                height: 32px;
+                background-color: $divider-color;
+                position: relative;
+                left: 60px;
+                top: 0;
+            }
+        }
+    }
+}
+@media (min-width: $content-width) {
+    header {
+        position: absolute;
+        transform: translateY(-320px)
+    }
+    .header-menu {
+        // &__left-part {
+        //     display: none;
+        // }
+        // &__feedback {
+        //     display: none;
+        // }
+        &__support {
+            position: absolute;
+            transform: translate(860px, 310px);
+            width: 240px;
+            justify-content: space-between;
+            &::before {
+                display: none;
+            }
+            
+            .red-round-button:first-child::before {
+                content: "Оставить заявку";
+                font-family: TT Lakes;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                white-space: nowrap;
+                position: absolute;
+                left: -113px;
+            }
+            .red-round-button:last-child::before {
+                content: "Статус ремонта";
+                font-family: TT Lakes;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                white-space: nowrap;
+                position: absolute;
+                left: 65px;
+            }
+        }
+        
+    }
+}
+
+@media (min-width: $widescreen) {
+    // .header-menu {
+    //     &__support {
+    //         transform: translate(860px, 20px);
+    //     }
+    // }
+}

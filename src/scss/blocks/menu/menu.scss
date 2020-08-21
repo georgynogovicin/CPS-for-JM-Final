@@ -1,0 +1,116 @@
+.menu {
+    position: absolute;
+    transform: translateX(-700px);
+
+
+    box-sizing: border-box;
+    background-color: white;
+    width: 320px;
+    min-width: 320px;
+    height: 100vh;
+    height: inherit;
+    padding: 24px 16px;
+    &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-basis: 80px;
+    }
+    &__search {
+        justify-content: flex-end;
+        display: flex;
+        flex-basis: 160px;
+    }
+        
+    &__menu-list {
+        margin: 0;
+        padding: 0;
+    }
+    &__list-item {
+        position: relative;
+        list-style-type: none;
+    }
+    &__menu-link {
+        display: block;
+        text-decoration: none;
+        padding: 20px 0;
+        font-family: TT Lakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        &:hover {
+            color: #7E7E82;
+            transition-duration: 200ms;
+        }
+        &:hover::before {
+            transition-duration: 200ms;
+            content: "";
+            width: 5px;
+            height: 40px;
+            background-color: $decoration-elements-color;
+            border-radius: 0 15px 15px 0;
+            position: absolute;
+            left: -16px;
+            top: 8px;
+        }
+    }
+
+    &__user-nav {
+        padding: 0;
+        .header-menu__feedback {
+            justify-content: flex-start;
+        }
+    }
+
+    &__contacts {
+        padding: 17px 0;
+    }
+    &__mail-to {
+        display: block;
+        font-family: TT Lakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $link-color;
+        text-decoration: none;
+        padding-bottom: 18px;
+    }
+    &__call-to {
+        display: block;
+        font-family: TT Lakes;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        color: $link-color;
+        text-decoration: none;
+    }
+    & a:hover {
+        color: $hover-link-color;
+    }
+}
+@media (min-width: $tablet-width) {
+    .menu {
+        &__user-nav {
+            margin-top: 241px;
+        }
+    }
+}
+
+
+@media (min-width: $widescreen) {
+    .menu {
+        transform: translateX(-320px);
+        padding: 18px 16px;
+        &__close {
+            display: none;
+        }
+
+    }
+}

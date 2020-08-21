@@ -1,26 +1,63 @@
 .equipment {
-
     &__container {
-        height: 260px;
+        height: 220px;
     }
 
     &__item {
-        width: 240px !important;
-        height: 160px !important;
+        max-width: 224px;
+        max-height: 160px;
+        box-sizing: border-box;
         padding: 16px;
-        margin-top: 24px;
+        margin: 24px 12px; 
+
         
         display: flex;
+        flex-direction: row;
 
         
         background-color: white;
         border: 1px solid $section-item-border-color;
         border-radius: 5%;
-
-
-        .white-round-button {
-            align-self: flex-end;
+        &:hover {
+            transition-duration: 300ms;
+            filter: drop-shadow(0 0 0.75rem $red-round-buttons-fill-color);
         }
     }
-    
+    &__item-title {
+        flex-basis: 80%;
+        display: block;
+        font-family: TT Lakes;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+
+    }
+
+    .white-round-button {
+        align-self: flex-end;
+        justify-self: flex-end;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .equipment {
+        &__container {
+            height: 100%;
+        }
+
+        &__list {
+            height: 200px !important;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+       .btn-read-more {
+           margin: 20px 32px;
+       }
+    }
 }

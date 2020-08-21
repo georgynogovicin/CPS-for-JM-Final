@@ -1,12 +1,54 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Pagination } from 'swiper';
+Swiper.use(Pagination);
 
-Swiper.use([Navigation, Pagination]);
+
+// const breakpoint = window.matchMedia("(min-width:768px)");
+
+// let mySwiper;
+
+// const breakpointChecker = () => {
+//     if (breakpoint.matches === true) {
+//         if (mySwiper !== undefined) {
+//             mySwiper.destroy(true, true);
+//         } else {
+//             return;
+//         }
+//     } else if (breakpoint.matches === false) {
+//         return enableSwiper();
+//     }
+// };
+
+// const enableSwiper = function () {
+//     mySwiper = new Swiper('.swiper-container', {
+//         direction: 'horizontal',
+//         loop: false,
+//         spaceBetween: 16,
+//         slidesPerView: 'auto',
+//         mousewheel: true,
+//         slidesOffsetBefore: 16,
+//         slidesOffsetAfter: 16,
+//         grabCursor: true,
+      
+        
+//         pagination: {
+//           el: '.swiper-pagination',
+//           type: 'bullets',
+//           clickable: true,
+//           speed: 200,
+//         },
+//       });
+// };
+
+// breakpoint.addListener(breakpointChecker);
+
+// breakpointChecker();
 
 
 let sectionSwiper = null;
 let screenWidth = window.matchMedia("(max-width: 767px)");
 
-const serviesSwiperInit = function() {
+
+const swiperInit = function() {
     if (!sectionSwiper) {
         sectionSwiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
@@ -17,6 +59,7 @@ const serviesSwiperInit = function() {
             slidesOffsetBefore: 16,
             slidesOffsetAfter: 16,
             grabCursor: true,
+            ally: true,
           
             
             pagination: {
@@ -31,18 +74,18 @@ const serviesSwiperInit = function() {
     }
 };
 
-const sectionSwiperDestroy = function() {
+const swiperDestroy = function() {
     if (sectionSwiper) {
         sectionSwiper.destroy();
         sectionSwiper = null;
     }
 };
 
-let mySwiper = function() {
+const mySwiper = function() {
     if (screenWidth.matches === true) {
-        serviesSwiperInit()
+        swiperInit()
     } else {
-        sectionSwiperDestroy()
+        swiperDestroy()
     }
 };
 

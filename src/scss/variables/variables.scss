@@ -6,6 +6,8 @@ $section-header-background-fill-color: linear-gradient(90deg, #F8F8F8 1.39%, #FF
 $divider-color: #EAEAEA;
 $decoration-elements-color: #41F6D7;
 $section-item-border-color: #EAEAEA;
+$link-color: #1B1C21;
+$hover-link-color: #7E7E82;
 
 //Buttons
 $red-round-buttons-fill-color: #FF3E79;
@@ -17,5 +19,11 @@ $content-menu-item-text-color: #7E7E82;
 $content-block-text-color: #1B1C21;
 $section-item-text-color: #7E7E82;
 
+
+//breakpoints
+$mobile: 320px;
+$tablet-width: 768px;
+$content-width: 1120px;
+$widescreen: 1440px;
 
 
