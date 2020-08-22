@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "description": "",
     "main": "script.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/georgynogovicin/CPS-for-JM-Final.git"
+    },
     "keywords": [],
     "author": "georgynogovicin",
     "license": "ISC",
