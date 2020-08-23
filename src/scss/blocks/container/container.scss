@@ -2,18 +2,11 @@
     max-width: $widescreen;
     min-width: $mobile;
     height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
 
-    &--disabled {
-
-    }
-
-    @media (min-width: $content-width) {
-        max-width: $content-width;
-        margin: 0 auto;
-    }
-    
-    @media (min-width: $widescreen) {
-        position: absolute;
-        transform: translateX(320px);
+    &__inner {
+        width: 100%;
     }
 }

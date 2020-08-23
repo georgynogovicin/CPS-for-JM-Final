@@ -76,7 +76,7 @@ const swiperInit = function() {
 
 const swiperDestroy = function() {
     if (sectionSwiper) {
-        sectionSwiper.destroy();
+        sectionSwiper.destroy(true, true);
         sectionSwiper = null;
     }
 };

@@ -106,7 +106,8 @@
 
 @media (min-width: $widescreen) {
     .menu {
-        transform: translateX(-320px);
+        position: relative;
+        transform: translateX(0);
         padding: 18px 16px;
         &__close {
             display: none;
