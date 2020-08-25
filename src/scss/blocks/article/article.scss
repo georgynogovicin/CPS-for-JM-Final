@@ -9,7 +9,7 @@
     }
 
     &__text {
-        padding-left: 16px;
+        padding: 16px;
 
         @media (min-width: $tablet-width) {
             width: calc(100% - 360px -48px);
@@ -54,6 +54,7 @@
     &__image {
         @media (min-width: $tablet-width) {
             padding-top: 24px;
+            padding-right: 12px;
         }
     }
 

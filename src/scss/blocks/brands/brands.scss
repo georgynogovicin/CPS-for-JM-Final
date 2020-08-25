@@ -3,6 +3,15 @@
         height: 130px;
     }
 
+    &__list {
+        transition-duration: 400ms;
+
+        &--expanded {
+            transition-duration: 400ms;
+            height: 350px;
+        }
+    }
+
     &__item {
         margin: 12px 12px;
         display: flex;

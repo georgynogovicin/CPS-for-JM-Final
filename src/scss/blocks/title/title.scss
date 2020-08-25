@@ -1,0 +1,19 @@
+.title {
+    margin: 0;
+    padding: 0 16px;
+    width: fit-content;
+    font-family: TT Lakes;
+    font-size: 28px;
+    line-height: 40px;
+    position: relative;
+    &::before {
+        content: "";
+        width: 5px;
+        height: 40px;
+        background-color: $decoration-elements-color;
+        border-radius: 0 15px 15px 0;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+}

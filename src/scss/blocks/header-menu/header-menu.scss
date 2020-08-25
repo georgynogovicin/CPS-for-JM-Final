@@ -1,5 +1,10 @@
 .header-menu {
     padding: 24px 16px;
+
+    @media (min-width: $content-width) {
+        position: absolute;
+        transform: translateY(-320px);
+    }
     .red-round-button {
         margin: 0 8px;
     }
@@ -15,14 +20,45 @@
     }
 
     &__left-part {
-        padding: inherit;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+        @media (min-width: $tablet-width) {
+            justify-content: space-between;
+            flex-basis: 175px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 2px;
+                height: 32px;
+                background-color: $divider-color;
+                position: absolute;
+                left: 62px;
+                top: 12px;
+            }
+        }
+
+        @media (min-width: $content-width) {
+            position: absolute;
+            transform: translateY(-320px);
+        }
     }
 
     &__feedback {
         display: none;
+
+        @media (min-width: $tablet-width) {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+            padding-right: 20px;
+        }
+
+        @media (min-width: $content-width) {
+            position: absolute;
+            transform: translateY(-600px);
+        }
     }
 
     &__support {
@@ -34,56 +70,13 @@
             width: 2px;
             height: 32px;
             background-color: $divider-color;
-            // position: relative;
-            // left: -10px;
-            // top: 4px;
             transform: translate(-6px, 4px);
         }
-    }
-}
-@media (min-width: $tablet-width) {
-    .header-menu {
-        &__feedback {
-            display: flex;
-            justify-content: flex-end;
-            flex-grow: 1;
-            padding-right: 20px;
-        }
 
-        .logo {
-            padding: 0 22px;
-        }
-
-        &__left-part {
-            justify-content: space-between;
-            &::before {
-                content: "";
-                width: 2px;
-                height: 32px;
-                background-color: $divider-color;
-                position: relative;
-                left: 60px;
-                top: 0;
-            }
-        }
-    }
-}
-@media (min-width: $content-width) {
-    header {
-        position: absolute;
-        transform: translateY(-320px)
-    }
-    .header-menu {
-        // &__left-part {
-        //     display: none;
-        // }
-        // &__feedback {
-        //     display: none;
-        // }
-        &__support {
+        @media (min-width: $content-width) {
             position: absolute;
-            transform: translate(860px, 310px);
-            width: 240px;
+            transform: translate(830px, 340px);
+            width: 260px;
             justify-content: space-between;
             &::before {
                 display: none;
@@ -97,7 +90,7 @@
                 letter-spacing: -0.2px;
                 white-space: nowrap;
                 position: absolute;
-                left: -113px;
+                transform: translateX(-80px);
             }
             .red-round-button:last-child::before {
                 content: "Статус ремонта";
@@ -107,17 +100,9 @@
                 letter-spacing: -0.2px;
                 white-space: nowrap;
                 position: absolute;
-                left: 65px;
+                transform: translateX(-80px);
             }
         }
-        
     }
 }
 
-@media (min-width: $widescreen) {
-    // .header-menu {
-    //     &__support {
-    //         transform: translate(860px, 20px);
-    //     }
-    // }
-}
