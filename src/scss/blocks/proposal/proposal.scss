@@ -1,7 +1,7 @@
 .proposal {
     background-color: $background-fill-color;
 
-    padding: 16px;
+    padding: 36px;
     
 
     &__descr {
@@ -17,7 +17,7 @@
     }
 
     &__link {
-        padding: 10px;
+        padding: 10px 0;
         padding-right: 25px;
         font-family: TT Lakes;
         font-size: 16px;
@@ -34,7 +34,7 @@
             height: 12px;
             background-image: url('../img/icons/chevron-single-right.png');
             position: absolute;
-            left: 265px;
+            left: 255px;
             top: 16px;
         }
         &:hover {

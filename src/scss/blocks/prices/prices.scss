@@ -1,14 +1,12 @@
 .prices {
 
-    &__container {
-        height: 270px;
-
-        @media (min-width: $tablet-width) {
-            height: 100%;
-        }
-    }
 
     &__list {
+        margin-block-start: 0;
+        padding-inline-start: 0;
+        transition-duration: 400ms;
+
+
         @media (min-width: $tablet-width) {
             flex-direction: column;
             align-items: center;

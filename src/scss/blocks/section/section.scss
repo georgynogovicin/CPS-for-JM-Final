@@ -1,6 +1,10 @@
 .section {
     background-color: $background-fill-color;
 
+    &__container {
+        height: auto;
+    }
+
     &__header {
         background: $section-header-background-fill-color;
         padding: 16px;

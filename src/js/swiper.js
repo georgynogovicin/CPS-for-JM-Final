@@ -3,9 +3,24 @@ Swiper.use(Pagination);
 
 
 
-let sectionSwiper = null;
+let sectionSwiper = false;
+
 let screenWidth = window.matchMedia("(max-width: 767px)");
 
+const swiperDestroy = function() {
+    if (sectionSwiper) {
+        sectionSwiper.destroy(true, true);
+        sectionSwiper = false;
+    }
+};
+
+const mySwiper = function() {
+    if (screenWidth.matches === true) {
+        swiperInit()
+    } else {
+        swiperDestroy()
+    }
+};
 
 const swiperInit = function() {
     if (!sectionSwiper) {
@@ -19,6 +34,7 @@ const swiperInit = function() {
             slidesOffsetAfter: 16,
             grabCursor: true,
             ally: true,
+            centeredSlides: true,
           
             
             pagination: {
@@ -33,20 +49,7 @@ const swiperInit = function() {
     }
 };
 
-const swiperDestroy = function() {
-    if (sectionSwiper) {
-        sectionSwiper.destroy(true, true);
-        sectionSwiper = null;
-    }
-};
 
-const mySwiper = function() {
-    if (screenWidth.matches === true) {
-        swiperInit()
-    } else {
-        swiperDestroy()
-    }
-};
 
 screenWidth.addListener(mySwiper);
 
