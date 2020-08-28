@@ -1,0 +1,22 @@
+.header {
+    width: 100%;
+    height: 88px;
+    box-sizing: border-box;
+    padding: 24px 16px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    list-style-type: none;
+
+    &__logo {
+        margin-left: 16px;
+        margin-right: auto;
+    }
+
+    @media (min-width: $content-width) {
+        position: absolute;
+        top: -88px;
+    }
+}

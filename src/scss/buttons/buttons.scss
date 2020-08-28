@@ -1,18 +1,67 @@
-.red-round-button {
-    background-color: $red-round-buttons-fill-color;
+.ui-button {
+    background-color: $ui-buttons-fill-color;
+    display: block;
     border: none;
     outline: none;
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     &:hover {
         transition-duration: 300ms;
-        filter: hue-rotate(45deg) drop-shadow(0 0 0.75rem $red-round-buttons-fill-color);
+        filter: hue-rotate(45deg) drop-shadow(0 0 0.75rem $ui-buttons-fill-color);
     }
+
+    &--burger {
+        background: no-repeat center/50% url("../img/icons/burger.png");
+        background-color: $ui-buttons-fill-color;
+        
+    }
+
+    &--close {
+        background: no-repeat center/50% url("../img/icons/close.png");
+        background-color: $ui-buttons-fill-color;
+    }
+
+    &--search {
+        background: no-repeat center/50% url("../img/icons/search.png");
+        background-color: $ui-buttons-fill-color;
+    }
+
+    &--call {
+        background: no-repeat center/50% url("../img/icons/call.png");
+        background-color: $ui-buttons-fill-color;
+    }
+
+    &--chat {
+        background: no-repeat center/50% url("../img/icons/chat.png");
+        background-color: $ui-buttons-fill-color;
+    }
+
+    &--profile {
+        background: no-repeat center/50% url("../img/icons/profile.png");
+        background-color: $ui-buttons-fill-color;
+    }
+
+    &--repair {
+        background: no-repeat center/50% url("../img/icons/repair.png");
+        background-color: $ui-buttons-fill-color;
+    }
+
+    &--checkstatus {
+        background: no-repeat center/50% url("../img/icons/checkstatus.png");
+        background-color: $ui-buttons-fill-color;
+    }
+
+    &--togo {
+        background: no-repeat center/30% url("../img/icons/chevron-single-right.png");
+        background-color: white;
+        border: 2px solid $round-buttons-border-color;
+    }
+
+    
 }
 
 
@@ -54,25 +103,8 @@
 }
 
 
-.white-round-button {
-    background-color: white;
-    border: 2px solid $round-buttons-border-color;
-    outline: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    &:hover {
-        transition-duration: 300ms;
-        filter: hue-rotate(45deg) drop-shadow(0 0 0.75rem $round-buttons-border-color);
-    }
-}
-
-.red-order-button {
-    background-color: $red-round-buttons-fill-color;
+.action-button {
+    background-color: $ui-buttons-fill-color;
     border: none;
     outline: none;
 
@@ -97,7 +129,7 @@
     cursor: pointer;
     &:hover {
         transition-duration: 300ms;
-        filter: hue-rotate(45deg) drop-shadow(0 0 0.75rem $red-round-buttons-fill-color);
+        filter: hue-rotate(45deg) drop-shadow(0 0 0.75rem $ui-buttons-fill-color);
     }
 
 }

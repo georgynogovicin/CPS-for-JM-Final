@@ -58,7 +58,7 @@ module.exports = {
                 ],
             },
 
-            // Подключаем картинки из css
+            //Подключаем картинки из css
             {
                 test: /\.(svg|png|jpg|jpeg|webp)$/,
                 use: [

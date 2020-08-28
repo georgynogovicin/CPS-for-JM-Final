@@ -8,34 +8,33 @@
     <title>CPS</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container container--active">
         <nav class="menu">
             <header class="menu__header">
                 <div class="menu__close">
-                    <button class="red-round-button"><img src="./img/icons/close.png"   alt="Закрыть"></button>
+                    <button class="ui-button ui-button--close"></button>
                 </div>
-                <div class="logo"><a href="#" class="logo__link"><img src="img/logo/Grouplogo.svg" alt="Логотип" class="logo__img"></a></div>
+                <div class="menu__logo logo"><a href="#" class="logo__link"><img src="img/logo/Grouplogo.svg" alt="Логотип" class="logo__img"></a></div>
                 <form action="#" class="menu__search">
                     <input type="search" class="search__text" hidden>
-                    <button class="search__btn red-round-button"><img src="./img/icons/search.png" alt="Поиск"></button>
+                    <button class="ui-button ui-button--search"></button>
                 </form>
             </header>
             <main class="menu__list">
-                    <li class="menu__list-item"><a href="#" class="menu__menu-link">Ремонт техники</a></li>
-                    <li class="menu__list-item"><a href="#" class="menu__menu-link">Услуги и сервисы</a></li>
-                    <li class="menu__list-item"><a href="#" class="menu__menu-link">Корпоративным клиентам</a></li>
-                    <li class="menu__list-item"><a href="#" class="menu__menu-link">Продавцам техники</a></li>
-                    <li class="menu__list-item"><a href="#" class="menu__menu-link">Партнерам</a></li>
-                    <li class="menu__list-item"><a href="#" class="menu__menu-link">Наши сервисные центры</a></li>
-                    <li class="menu__list-item"><a href="#" class="menu__menu-link">Контакты</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Ремонт техники</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Услуги и сервисы</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Корпоративным клиентам</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Продавцам техники</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Партнерам</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Наши сервисные центры</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
     
             </main>
             <footer class="menu__footer">
-                <ul class="menu__user-nav">
-                    <li class="menu__user-nav-item"><button class="red-round-button"><img src="./img/icons/call.png" alt="Поиск"></button></li>
-                    <li class="menu__user-nav-item"><button class="red-round-button"><img src="./img/icons/chat.png" alt="Поиск"></button></li>
-                    <li class="menu__user-nav-item"><button class="red-round-button"><img src="./img/icons/profile.png" alt="Поиск"></button></li>
-                    
+                <ul class="feedback">
+                    <li class="feedback__item"><button class="ui-button ui-button--call"></button></li>
+                    <li class="feedback__item"><a class="ui-button ui-button--chat"></a></li>
+                    <li class="feedback__item"><a class="ui-button ui-button--profile"></a></li>
                 </ul>
                 <div class="menu__contacts">
                     <a href="mailto:mail@cps.com" class="menu__mail-to">mail@cps.com</a>
@@ -48,48 +47,45 @@
                 </ul>
             </footer>
         </nav>
-        <form action="#" class="modal">
-            <button class="red-round-button modal__btn-close">
-            <img src="img/icons/close.png" alt="Закрыть"></button>
-            <h1 class="title">Обратная связь</h1>
-            <input type="text" name="name" class="modal__name" placeholder="Имя">
-            <input type="tel" name="phone" class="modal__phone" placeholder="Телефон">
-            <input type="email" class="modal__email" placeholder="Электронная почта">
-            <textarea name="message" class="modal__message" placeholder="Сообщение"></textarea>
-            <p class="modal__agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a></p>
-            <button class="red-order-button modal__btn">ОТПРАВИТЬ<img src="./img/icons/chevron-single-right-white.png"></button>
-        </form>
-        <form action="#" class="modal">
-            <button class="red-round-button modal__btn-close">
-            <img src="img/icons/close.png" alt="Закрыть"></button>
-            <h1 class="title">Обратная связь</h1>
-            <input type="tel" name="phone" class="modal__phone" placeholder="Телефон">
-            <p class="modal__agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a></p>
-            <button class="red-order-button modal__btn">ОТПРАВИТЬ<img src="./img/icons/chevron-single-right-white.png"></button>
-        </form>
+        <div class="modal modal--active">
+            <form action="#" class="form">
+                <button class="ui-button ui-button--close"></button>
+                <h1 class="title">Обратная связь</h1>
+                <input type="text" name="name" class="form__input" placeholder="Имя">
+                <input type="tel" name="phone" class="form__input" placeholder="Телефон">
+                <input type="email" class="form__input" placeholder="Электронная почта">
+                <textarea name="message" class="form__input form__input--message" placeholder="Сообщение"></textarea>
+                <p class="form__agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a></p>
+                <button class="action-button">ОТПРАВИТЬ<img src="./img/icons/chevron-single-right-white.png"></button>
+            </form>
+        </div>
+        <div class="modal">
+            <form action="#" class="form">
+                <button class="ui-button ui-button--close"></button>
+                <h1 class="title">Закзать звонок</h1>
+                <input type="tel" name="phone" class="form__input" placeholder="Телефон">
+                <p class="form__agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a></p>
+                <button class="action-button">ОТПРАВИТЬ<img src="./img/icons/chevron-single-right-white.png"></button>
+            </form>
+        </div>
+        
         <div class="container__inner">
-        <header>
-            <nav class="header-menu">
-                <ul class="header-menu__list">
-                    <li class="header-menu__left-part">
-                        <button class="red-round-button"><img src="./img/icons/burger.png" alt="Меню"></button>
-                        <div class="logo"><a href="#" class="logo__link"><img src="./img/logo/Grouplogo.svg" alt="Логотип CPS" class="logo__img"></a></div>
-                    </li>
-                    <li class="header-menu__feedback">
-                        <button class="red-round-button"><img src="./img/icons/call.png" alt="Заказать звонок"></button>
-                        <button class="red-round-button"><img src="./img/icons/chat.png" alt="Написать нам"></button>
-                        <button class="red-round-button"><img src="./img/icons/profile.png" alt="Личный кабинет"></button>
-                    </li>
-                    <li class="header-menu__support">
-                        <button class="red-round-button"><img src="./img/icons/repair.png" alt="Ремонт"></button>
-                        <button class="red-round-button"><img src="./img/icons/checkstatus.png" alt="Статус ремонта"></button>
-                    </li>
-                </ul>
-            </nav>
+        <header class="header">
+            <button class="ui-button ui-button--burger"></button>
+            <div class="header__logo logo"><a href="#" class="logo__link"><img src="img/logo/Grouplogo.svg" alt="Логотип" class="logo__img"></a></div>
+            <ul class="feedback">
+                <li class="feedback__item"><button class="ui-button ui-button--call"></button></li>
+                <li class="feedback__item"><a class="ui-button ui-button--chat"></a></li>
+                <li class="feedback__item"><a class="ui-button ui-button--profile"></a></li>
+            </ul>
+            <ul class="support">
+                <li class="support__item"><a class="ui-button ui-button--repair"></a></li>
+                <li class="support__item"><a class="ui-button ui-button--checkstatus"></a></li>
+            </ul>
         </header>
         
         <main class="content">
-            <h1 class="content title">Услуги и сервисы</h1>
+            <h1 class="title">Услуги и сервисы</h1>
             <nav class="content__menu">
                 <ul class="content__menu-list">
                     <li class="content__menu-item"><a href="#" class="content__menu-link">Ремонтируемые бренды</a></li>
@@ -125,29 +121,29 @@
             <div class="section__container swiper-container">
                 <ul class="brands__list swiper-wrapper">
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/samsung.png" alt="Samsung" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/sony.svg" alt="Sony" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/viewsonic.png" alt="ViewSonic" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/hp.png" alt="HP" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/lenovo.png" alt="Lenovo" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/acer.png" alt="Acer" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/apple.png" alt="Apple" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/bosh.png" alt="Bosh" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/apple.png" alt="Apple" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/samsung.png" alt="Samsung" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/sony.svg" alt="Sony" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/viewsonic.png" alt="ViewSonic" class="logo__img"></a></div>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button></li>
+                        <button class="ui-button ui-button--togo"></button></li>
                 </ul>
                 <div class="swiper-pagination"></div>
                 <button type="button" class="btn-read-more brands" id="brands-expand-btn">Показать все</button>
@@ -161,19 +157,19 @@
                 <ul class="swiper-wrapper equipment__list" id="equipment-wrapper">
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт ноутбуков</h3>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button>
+                        <button class="ui-button ui-button--togo"></button>
                     </li>
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт планшетов</h3>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button>
+                        <button class="ui-button ui-button--togo"></button>
                     </li>
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт ПК</h3>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button>
+                        <button class="ui-button ui-button--togo"></button>
                     </li>
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт  мониторов</h3>
-                        <button class="white-round-button"><img src="./img/icons/chevron-single-right.png" alt="Открыть"></button>
+                        <button class="ui-button ui-button--togo"></button>
                     </li>
                 </ul>
                 <div class="swiper-pagination"></div>
@@ -193,83 +189,84 @@
                 <ul class="swiper-wrapper prices__list">
                     <li class="swiper-slide prices__item">
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Ремонтные услуги</h3>
+                            <p class="prices__title prices__title--mobile">Ремонтные услуги</p>
                             <p class="prices__descr">Замена программного обеспечения</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Цена</h3>
+                            <p class="prices__title prices__title--mobile">Цена</p>
                             <p class="prices__descr">Бесплатно</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Срок</h3>
+                            <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30-120 мин</p>
-                            <button class="red-order-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
                         </div>
                     </li>
                     <li class="swiper-slide prices__item">
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Ремонтные услуги</h3>
+                            <p class="prices__title prices__title--mobile">Ремонтные услуги</p>
                             <p class="prices__descr">Замена дисплея</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Цена</h3>
+                            <p class="prices__title prices__title--mobile">Цена</p>
                             <p class="prices__descr">1 000 ₽</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Срок</h3>
+                            <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30-120 мин</p>
-                            <button class="red-order-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
                         </div>
                     </li>
                     <li class="swiper-slide prices__item">
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Ремонтные услуги</h3>
+                            <p class="prices__title prices__title--mobile">Ремонтные услуги</p>
                             <p class="prices__descr">Замена полифонического динамика</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Цена</h3>
+                            <p class="prices__title prices__title--mobile">Цена</p>
                             <p class="prices__descr">1 000р</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Срок</h3>
+                            <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30-120 мин</p>
-                            <button class="red-order-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
                         </div>
                     </li>
                     <li class="swiper-slide prices__item">
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Ремонтные услуги</h3>
+                            <p class="prices__title prices__title--mobile">Ремонтные услуги</p>
                             <p class="prices__descr">Замена программного обеспечения</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Цена</h3>
+                            <p class="prices__title prices__title--mobile">Цена</p>
                             <p class="prices__descr">1 000р</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Срок</h3>
+                            <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30-120 мин</p>
-                            <button class="red-order-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
                         </div>
                     </li>
                     <li class="swiper-slide prices__item">
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Ремонтные услуги</h3>
+                            <p class="prices__title prices__title--mobile">Ремонтные услуги</p>
                             <p class="prices__descr">Диагностика</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Цена</h3>
+                            <p class="prices__title prices__title--mobile">Цена</p>
                             <p class="prices__descr">Бесплатно</p></div>
                         <div class="prices__descr-list-item">
-                            <h3 class="prices__title prices__title--mobile">Срок</h3>
+                            <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30 мин</p>
-                            <button class="red-order-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
                         </div>
                     </li>
                     
                 </ul>
                 <div class="swiper-pagination"></div>
             </div>
-            <div class="proposal">
-                <p class="proposal__descr">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-                <a href="#" class="proposal__link">Получить коммерческое предложение</a>
+            <div class="section__footer">
+                <p class="section__proposal">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+                <a href="#" class="section__link">Получить коммерческое предложение</a>
             </div>
         </section>
     </main>
         <footer class="footer">
             <ul class="footer__list">
-                <li class="footer__list-item">© 2019 CPS<br>
-                    Разработано командой <a href='#' class="footer__link">Apesong</a></li>
+                <li class="footer__list-item">© 2019 CPS
+                    <p>Разработано командой<a href='#' class="footer__link">Apesong</a></p>
+                    </li>
                 <li class="footer__list-item"><a href='#' class="footer__link">Политика конфиденциальности</a></li>
                 <li class="footer__list-item">Информация, размещенная на данной странице, не является публичной офертой</li>
             </ul>

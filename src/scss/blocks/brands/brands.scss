@@ -37,7 +37,7 @@
         box-sizing: border-box;
         &:hover {
             transition-duration: 300ms;
-            filter: drop-shadow(0 0 0.75rem $red-round-buttons-fill-color);
+            filter: drop-shadow(0 0 0.75rem $ui-buttons-fill-color);
         }
         
     }

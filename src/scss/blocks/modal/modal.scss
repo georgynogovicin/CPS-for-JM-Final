@@ -4,103 +4,21 @@
     min-height: 100vh;
     box-sizing: border-box;
     position: absolute;
-    z-index: 2000;
-    transform: translateX(3000px);
-    transition: transform 0.5s ease-in;
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 24px 16px;
+    z-index: -10;
+    top: 320px;
+    transition: z-index 0.5s ease-in;
     
     background-color: $background-fill-color;
-    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 
 
     &--active {
-        transform: translateX(0);
+        top: 0;
+        z-index: 2000;
         height: 100%;
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+        
         @media (min-width: $content-width) {
             right: 0;
         }
     }
-    
-    .title {
-        margin: 24px 0;
-        &::before {
-            left: -16px;
-        }
-    }
-    
-
-    &__btn-close {
-        @media (min-width: $widescreen) {
-            position: absolute;
-            transform: translate(-80px, 12px);
-        }
-    }
-
-    &__header {
-        font-family: TT Lakes;
-        font-size: 24px;
-        line-height: 32px;
-        position: relative;
-        &::before {
-            content: "";
-            width: 5px;
-            height: 40px;
-            background-color: $decoration-elements-color;
-            border-radius: 0 15px 15px 0;
-            position: absolute;
-            left: -16px;
-            top: -3px;
-        }
-    }
-
-    &__name {
-        margin-bottom: 16px;
-        padding: 12px;
-        border: 1px solid $section-item-border-color;
-        border-radius: 8px;
-    }
-
-    &__phone {
-        margin-bottom: 16px;
-        padding: 12px;
-        border: 1px solid $section-item-border-color;
-        border-radius: 8px;
-    }
-
-    &__email {
-        margin-bottom: 16px;
-        padding: 12px;
-        border: 1px solid $section-item-border-color;
-        border-radius: 8px;
-    }
-
-    &__message {
-        margin-bottom: 16px;
-        padding: 12px;
-        border: 1px solid $section-item-border-color;
-        border-radius: 8px;
-        resize: none;
-        min-height: 118px;
-    }
-
-    &__agreement {
-        color: $section-item-text-color;font-family: TT Lakes;
-        font-size: 14px;
-        line-height: 16px;
-
-    }
-
-    &__link {
-        text-decoration: none;
-        color: $red-round-buttons-fill-color;
-    }
-
-    &__btn {
-       align-self: flex-end;
-       max-height: 32px;
-    }
-    
-
 }

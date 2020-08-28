@@ -11,6 +11,12 @@
     height: inherit;
     padding: 24px 16px;
 
+    &--active {
+        transform: translateX(0);
+        z-index: 1000;
+        height: 100%;
+    }
+
     @media (min-width: $widescreen) {
         position: relative;
         transform: translateX(0);
@@ -38,15 +44,15 @@
         flex-basis: 160px;
     }
         
-    &__menu-list {
+    &__list {
         margin: 0;
         padding: 0;
     }
-    &__list-item {
+    &__item {
         position: relative;
         list-style-type: none;
     }
-    &__menu-link {
+    &__link {
         display: block;
         text-decoration: none;
         padding: 20px 0;
@@ -72,7 +78,7 @@
         }
     }
 
-    &__user-nav {
+    & .feedback{
         width: 152px;
         list-style-type: none;
         margin-block-start: 0;
@@ -82,7 +88,7 @@
         justify-content: space-between;
 
         @media (min-width: $tablet-width) {
-            margin-top: 241px;
+            margin-top: 240px;
         }
     }
 
@@ -114,14 +120,3 @@
 }
 
 
-// @media (min-width: $widescreen) {
-//     .menu {
-//         position: relative;
-//         transform: translateX(0);
-//         padding: 18px 16px;
-//         &__close {
-//             display: none;
-//         }
-
-//     }
-// }

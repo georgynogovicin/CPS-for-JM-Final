@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 24px 16px;
+
+    .title {
+        margin: 24px 0;
+        &::before {
+            left: -16px;
+        }
+    }
+
+    & .ui-button {
+        @media (min-width: $widescreen) {
+            position: absolute;
+            transform: translate(-80px, 12px);
+        }
+    }
+
+    & .action-button {
+        align-self: flex-end;
+    }
+
+    &__input {
+        margin-bottom: 16px;
+        padding: 12px;
+        border: 1px solid $section-item-border-color;
+        border-radius: 8px;
+
+        &--message {
+            resize: none;
+            min-height: 118px;
+        }
+    }
+}

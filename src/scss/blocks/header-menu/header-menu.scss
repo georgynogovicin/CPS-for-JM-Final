@@ -1,11 +1,13 @@
 .header-menu {
     padding: 24px 16px;
+    position: relative;
+    z-index: 1;
 
     @media (min-width: $content-width) {
         position: absolute;
         transform: translateY(-320px);
     }
-    .red-round-button {
+    .ui-button {
         margin: 0 8px;
     }
 
@@ -76,13 +78,14 @@
         @media (min-width: $content-width) {
             position: absolute;
             transform: translate(830px, 340px);
+            right: -230px;
             width: 260px;
             justify-content: space-between;
             &::before {
                 display: none;
             }
             
-            .red-round-button:first-child::before {
+            .ui-button:first-child::before {
                 content: "Оставить заявку";
                 font-family: TT Lakes;
                 font-size: 16px;
@@ -90,9 +93,9 @@
                 letter-spacing: -0.2px;
                 white-space: nowrap;
                 position: absolute;
-                transform: translateX(-80px);
+                transform: translate(-80px);
             }
-            .red-round-button:last-child::before {
+            .ui-button:last-child::before {
                 content: "Статус ремонта";
                 font-family: TT Lakes;
                 font-size: 16px;

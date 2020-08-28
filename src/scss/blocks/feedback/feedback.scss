@@ -1,0 +1,14 @@
+.feedback {
+    list-style-type: none;
+    display: none;
+
+    &__item {
+        margin-left: 16px;
+    }
+
+    
+    @media (min-width: $tablet-width) {
+        display: flex;
+        justify-content: flex-end;
+    }
+}

@@ -1,0 +1,69 @@
+.support {
+    list-style-type: none;
+
+    margin-left: 38px;
+    padding-inline-start: 0;
+
+    justify-self: self-end;
+
+    display: flex;
+    justify-content: flex-end;
+
+    &__item {
+        margin-left: 16px;
+    }
+    
+    &::before {
+        content: "";
+        width: 2px;
+        height: 32px;
+        background-color: $divider-color;
+        transform: translate(-6px, 4px);
+    }
+
+    @media (min-width: $content-width) {
+        position: absolute;
+        top: 95px;
+        right: 0;
+
+        margin-right: 30px;
+
+        &::before {
+            display: none;
+        }
+
+        
+
+        &__item:first-child::before {
+            content: "Оставить заявку";
+            font-family: TT Lakes;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            white-space: nowrap;
+            position: absolute;
+            transform: translate(-115px, 5px);
+            cursor: pointer;
+        }
+
+        &__item:last-child {
+            margin-left: 160px;
+        }
+
+        &__item:last-child::before {
+            content: "Статус ремонта";
+            font-family: TT Lakes;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            white-space: nowrap;
+            position: absolute;
+            transform: translate(-115px, 5px);
+            cursor: pointer;
+        }
+    }
+
+    @media (min-width: $widescreen) {
+        right: 310px;
+    }
+}

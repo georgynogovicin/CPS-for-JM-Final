@@ -5,6 +5,8 @@
     overflow: hidden;
     margin: 0 auto;
     display: flex;
+    position: relative;
+    z-index: 1;
     &--active {
         position: relative;
         overflow: hidden;
@@ -23,6 +25,5 @@
 
     &__inner {
         width: 100%;
-        
     }
 }
