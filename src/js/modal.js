@@ -1,50 +1,61 @@
 let openMenuBtn = document.querySelector('.ui-button--burger');
-let closeBtn = document.querySelector('.ui-button--close');
-
+let closeMenuBtn = document.querySelector('.ui-button--close');
+let openModalCallBtn = document.querySelectorAll('.ui-button--call');
+let modalCall = document.getElementById('modal-call');
 let menu = document.querySelector('.menu');
 let container = document.querySelector('.container');
-
-const openMenuByClick = (event) => {
-    event.preventDefault();
-    openMenu();
-}
 
 const openMenu = () => {
     menu.classList.add('menu--active');
     container.classList.add('container--active');
-    outOfMenuClickHandler();
-    outOfMenuKeyDownHandler();
+    closeByESCSwitcher();
+    closeMenuOutOfModalSwither();
 };
 
-const outOfMenuClickHandler = () => {
-    window.addEventListener('click', closeMenuByClick);
-}
+const closeByESCSwitcher = () => {
+    window.addEventListener('keydown', closeMenuByESC);
+};
 
-const outOfMenuKeyDownHandler = () => {
-    window.addEventListener('keydown', closeMEnuByESC);
+const closeMenuOutOfModalSwither = () => {
+    window.addEventListener('click', closeMenuOutOfModal);
 }
 
 const closeMenu = () => {
-    menu.classList.remove('menu--active')
+    menu.classList.remove('menu--active');
     container.classList.remove('container--active');
-    openMenuBtn.addEventListener('click', openModalByClick, {once: true})
 };
 
-const closeMEnuByESC = (event) => {
-    event.preventDefault();
-    if (event.keyCode === 27 ) {
-        window.removeEventListener('keydown', closeModalByESC);
+const closeModalCall = () => {
+    modalCall.classList.remove('modal--active');
+    container.classList.remove('container--active');
+}
+
+const closeMenuByESC = (event) => {
+    if (event.keyCode === 27) {
+        window.removeEventListener('keydown', closeMenuByESC);
         closeMenu();
     }
 };
 
-const closeMenuByClick = (event) => {
-    event.preventDefault();
-    if (event.target === container || event.target === openMenuBtn) {
-        window.removeEventListener('click', closeMenuByClick);
+const closeMenuOutOfModal = (event) => {
+    if (event.target === container || event.target === closeMenuBtn) {
+        window.removeEventListener('click', closeMenuOutOfModal);
         closeMenu();
     }
 }
 
+const openModaCallSwither = (arr) => {
+    for (i = 0; i < arr.length; i++) {
+        arr[i].addEventListener('click', function() {
+            modalCall.classList.add('modal--active');
+            container.classList.add('container--active');
+            closeByESCSwitcher();
+            closeMenuOutOfModalSwither();
+        })
+    }
+}
 openMenuBtn.addEventListener('click', openMenu);
-closeBtn.addEventListener('click', closeMenu);
+openModaCallSwither(openModalCallBtn);
+
+
+
