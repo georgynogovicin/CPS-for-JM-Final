@@ -1,6 +1,6 @@
 @import 'normalize.css';
 @import './blocks/swiper/swiper.scss';
-@import './variables/variables';
+@import './variables/variables.scss';
 @import './buttons/buttons.scss';
 @import './blocks/header-menu/header-menu.scss';
 @import './blocks/content/content.scss';
@@ -8,15 +8,15 @@
 @import './blocks/section/section.scss';
 @import './blocks/brands/brands.scss';
 @import './blocks/equipment/equipment.scss';
-@import './blocks/prices/prices';
-@import './blocks/footer/footer';
-@import './blocks/menu/menu';
-@import './blocks/lang-list/lang-list';
-@import './blocks/modal/modal';
+@import './blocks/prices/prices.scss';
+@import './blocks/footer/footer.scss';
+@import './blocks/menu/menu.scss';
+@import './blocks/lang-list/lang-list.scss';
+@import './blocks/modal/modal.scss';
 @import './blocks/container/container.scss';
 @import './blocks/title/title.scss';
 @import './blocks/header/header.scss';
-@import './blocks/feedback/feedback';
+@import './blocks/feedback/feedback.scss';
 @import './blocks/support/support.scss';
 @import './blocks/form/form.scss';
 

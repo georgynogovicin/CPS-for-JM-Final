@@ -9,9 +9,11 @@ let screenWidth = window.matchMedia("(max-width: 767px)");
 
 const swiperDestroy = function() {
     if (sectionSwiper) {
-        sectionSwiper.destroy(true, true);
-        sectionSwiper = false;
+        for (let i = 0; i < sectionSwiper.length; i++) {
+            sectionSwiper[i].destroy(true, true);
+        }   
     }
+    sectionSwiper = false;
 };
 
 const mySwiper = function() {
