@@ -9,9 +9,7 @@ let openMenuBtn = document.querySelector('.ui-button--burger'),
     modalActive = 'modal--active',
     menuActive = 'menu--active',
     closeCallBtn = modalCall.querySelector('.ui-button--close'),
-    closeFeedbackBtn = modalFeedback.querySelector('.ui-button--close'),
-    callInput = modalCall.querySelector('input'),
-    feedbackInput = modalFeedback.querySelector('.form__input');
+    closeFeedbackBtn = modalFeedback.querySelector('.ui-button--close');
 
 
 //Open callback modal
@@ -96,23 +94,25 @@ const closeModal = (bl, cl) => {
 //Open callback btn listener
 callBtn.forEach(function(item) { 
     item.addEventListener('click', function () {
+        closeModal(menu, menuActive);
         modalCall.classList.add(modalActive);
         container.classList.add('container--active');
-        callInput.focus();
+        callInput = modalCall.querySelector('input').focus();
         window.addEventListener('keydown', closeModalCallByESC);
         window.addEventListener('click', closeModalCallByClick);
-        closeModal(menu, menuActive);
+        
     })
 });
 //Open feedback btn listener
 feedbackBtn.forEach(function(item) { 
     item.addEventListener('click', function () {
+        closeModal(menu, menuActive);
         modalFeedback.classList.add(modalActive);
         container.classList.add('container--active');
-        feedbackInput.focus();
+        modalFeedback.querySelector('.form__input').focus();
         window.addEventListener('keydown', closeFeedbackByESC);
         window.addEventListener('click', closeFeedbackByLCick);
-        closeModal(menu, menuActive);
+        
     })
 });
 //OPen side-menu btn listener
