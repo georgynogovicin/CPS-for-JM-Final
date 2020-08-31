@@ -18,7 +18,6 @@ let openMenuBtn = document.querySelector('.ui-button--burger'),
 const openModalCall = () => { 
     modalCall.classList.add(modalActive);
     container.classList.add('container--active');
-    callInput.focus();
     window.addEventListener('keydown', closeModalCallByESC);
     window.addEventListener('click', closeModalCallOutOfModal);
 };
@@ -41,7 +40,6 @@ const closeModalCallByClick = (event) => {
 const openModalFeedback = () => { 
     modalFeedback.classList.add(modalActive);
     container.classList.add('container--active');
-    feedbackInput.focus();
     window.addEventListener('keydown', closeFeedbackByESC);
     window.addEventListener('click', closeFeedbackByLCick);
 };
@@ -100,6 +98,7 @@ callBtn.forEach(function(item) {
     item.addEventListener('click', function () {
         modalCall.classList.add(modalActive);
         container.classList.add('container--active');
+        callInput.focus();
         window.addEventListener('keydown', closeModalCallByESC);
         window.addEventListener('click', closeModalCallByClick);
         closeModal(menu, menuActive);
@@ -110,6 +109,7 @@ feedbackBtn.forEach(function(item) {
     item.addEventListener('click', function () {
         modalFeedback.classList.add(modalActive);
         container.classList.add('container--active');
+        feedbackInput.focus();
         window.addEventListener('keydown', closeFeedbackByESC);
         window.addEventListener('click', closeFeedbackByLCick);
         closeModal(menu, menuActive);
