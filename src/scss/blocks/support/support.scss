@@ -21,7 +21,7 @@
         transform: translate(-6px, 4px);
     }
 
-    @media (min-width: $content-width) {
+    @media (min-width: $widescreen) {
         position: absolute;
         top: 95px;
         right: 0;

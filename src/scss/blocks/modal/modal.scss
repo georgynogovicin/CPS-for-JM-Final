@@ -17,6 +17,7 @@
 
     &--active {
         position: fixed;
+        overflow: scroll;
         left: 0;
         z-index: 2000;
         height: 100%;

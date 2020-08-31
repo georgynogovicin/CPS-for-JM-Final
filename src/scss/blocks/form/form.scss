@@ -27,6 +27,10 @@
         border: 1px solid $section-item-border-color;
         border-radius: 8px;
 
+        &:focus {
+            border-color: $section-item-border-color;
+        }
+
         &--message {
             resize: none;
             min-height: 118px;

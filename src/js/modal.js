@@ -10,7 +10,7 @@ let openMenuBtn = document.querySelector('.ui-button--burger'),
     menuActive = 'menu--active',
     closeCallBtn = modalCall.querySelector('.ui-button--close'),
     closeFeedbackBtn = modalFeedback.querySelector('.ui-button--close'),
-    callInput = modalCall.querySelector('.form__input'),
+    callInput = modalCall.querySelector('input'),
     feedbackInput = modalFeedback.querySelector('.form__input');
 
 
@@ -102,6 +102,7 @@ callBtn.forEach(function(item) {
         container.classList.add('container--active');
         window.addEventListener('keydown', closeModalCallByESC);
         window.addEventListener('click', closeModalCallByClick);
+        closeModal(menu, menuActive);
     })
 });
 //Open feedback btn listener
@@ -111,6 +112,7 @@ feedbackBtn.forEach(function(item) {
         container.classList.add('container--active');
         window.addEventListener('keydown', closeFeedbackByESC);
         window.addEventListener('click', closeFeedbackByLCick);
+        closeModal(menu, menuActive);
     })
 });
 //OPen side-menu btn listener
