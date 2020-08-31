@@ -1,12 +1,10 @@
 .brands {
-    &__container {
-        height: auto;
-    }
+
 
     &__list {
         margin-block-start: 0;
         padding-inline-start: 0;
-        transition-duration: 400ms;
+        transition: all 400ms ease-in;
 
         @media (min-width: $tablet-width) {
             height: 190px !important;
@@ -17,8 +15,7 @@
         }
 
         &--expanded {
-            transition-duration: 400ms;
-            height: 350px;
+            height: 380px !important;
         }
     }
 
