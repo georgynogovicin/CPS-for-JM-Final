@@ -12,7 +12,7 @@
 
     & .ui-button {
         @media (min-width: $widescreen) {
-            position: absolute;
+            position: fixed;
             transform: translate(-80px, 12px);
         }
     }
