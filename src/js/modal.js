@@ -17,7 +17,7 @@ const openModalCall = () => {
     modalCall.classList.add(modalActive);
     container.classList.add('container--active');
     window.addEventListener('keydown', closeModalCallByESC);
-    window.addEventListener('click', closeModalCallOutOfModal);
+    window.addEventListener('click', closeModalCallByClick);
 };
 // CLose by ESC keydown listener
 const closeModalCallByESC = (event) => { 
@@ -97,7 +97,7 @@ callBtn.forEach(function(item) {
         closeModal(menu, menuActive);
         modalCall.classList.add(modalActive);
         container.classList.add('container--active');
-        callInput = modalCall.querySelector('input').focus();
+        modalCall.querySelector('input').focus({preventScroll:true});
         window.addEventListener('keydown', closeModalCallByESC);
         window.addEventListener('click', closeModalCallByClick);
         
@@ -109,7 +109,7 @@ feedbackBtn.forEach(function(item) {
         closeModal(menu, menuActive);
         modalFeedback.classList.add(modalActive);
         container.classList.add('container--active');
-        modalFeedback.querySelector('.form__input').focus();
+        modalFeedback.querySelector('.form__input').focus({preventScroll:true});
         window.addEventListener('keydown', closeFeedbackByESC);
         window.addEventListener('click', closeFeedbackByLCick);
         

@@ -1,6 +1,5 @@
 .container {
     max-width: $widescreen;
-    min-width: $mobile;
     height: auto;
     overflow: hidden;
     margin: 0 auto;
@@ -8,7 +7,7 @@
     position: relative;
     z-index: 1;
     &--active {
-        position: relative;
+        // position: fixed;
         overflow: hidden;
         &::before {
             content: '';

@@ -1,19 +1,12 @@
 .form {
     display: flex;
     flex-flow: column nowrap;
-    padding: 24px 16px;
+    padding: 0 16px 24px 16px;
 
     .title {
         margin: 24px 0;
         &::before {
             left: -16px;
-        }
-    }
-
-    & .ui-button {
-        @media (min-width: $widescreen) {
-            position: fixed;
-            transform: translate(-80px, 12px);
         }
     }
 
