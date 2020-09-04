@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
@@ -11,13 +11,12 @@
         <nav class="menu">
             <header class="menu__header">
                 <div class="menu__close">
-                    <button class="ui-button ui-button--close"></button>
+                    <button class="interaction-btn interaction-btn--close"></button>
                 </div>
                 <div class="menu__logo logo"><a href="#" class="logo__link"><img src="img/logo/Grouplogo.svg" alt="Логотип" class="logo__img"></a></div>
-                <form action="#" class="menu__search">
-                    <input type="search" class="search__text" hidden>
-                    <button class="ui-button ui-button--search"></button>
-                </form>
+                <div class="menu__search">
+                    <button class="interaction-btn interaction-btn--search"></button>
+                </div>
             </header>
             <main class="menu__list">
                     <li class="menu__item"><a href="#" class="menu__link">Ремонт техники</a></li>
@@ -31,9 +30,9 @@
             </main>
             <footer class="menu__footer">
                 <ul class="feedback">
-                    <li class="feedback__item"><button class="ui-button ui-button--call"></button></li>
-                    <li class="feedback__item"><a class="ui-button ui-button--chat"></a></li>
-                    <li class="feedback__item"><a class="ui-button ui-button--profile"></a></li>
+                    <li class="feedback__item"><button class="interaction-btn interaction-btn--call"></button></li>
+                    <li class="feedback__item"><button class="interaction-btn interaction-btn--chat"></button></li>
+                    <li class="feedback__item"><button class="interaction-btn interaction-btn--profile"></button></li>
                 </ul>
                 <div class="menu__contacts">
                     <a href="mailto:mail@cps.com" class="menu__mail-to">mail@cps.com</a>
@@ -47,39 +46,39 @@
             </footer>
         </nav>
         <div class="modal modal--feedback">
-            <button class="ui-button ui-button--close"></button>
+            <button class="interaction-btn interaction-btn--close"></button>
             <form action="#" class="form">
-                <h1 class="title">Обратная связь</h1>
+                <h2 class="title">Обратная связь</h2>
                 <input type="text" name="name" class="form__input" placeholder="Имя">
                 <input type="tel" name="phone" class="form__input" placeholder="Телефон">
                 <input type="email" class="form__input" placeholder="Электронная почта">
                 <textarea name="message" class="form__input form__input--message" placeholder="Сообщение"></textarea>
                 <p class="form__agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a></p>
-                <button class="action-button">ОТПРАВИТЬ<img src="./img/icons/chevron-single-right-white.png"></button>
+                <button class="action-button"><span>ОТПРАВИТЬ</span></button>
             </form>
         </div>
         <div class="modal modal--call">
-            <button class="ui-button ui-button--close"></button>
+            <button class="interaction-btn interaction-btn--close"></button>
             <form action="#" class="form">
-                <h1 class="title">Заказать звонок</h1>
+                <h2 class="title">Заказать звонок</h2>
                 <input type="tel" name="phone" class="form__input" placeholder="Телефон">
                 <p class="form__agreement">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a></p>
-                <button class="action-button">ОТПРАВИТЬ<img src="./img/icons/chevron-single-right-white.png"></button>
+                <button class="action-button"><span>Отправить</span></button>
             </form>
         </div>
         
         <div class="container__inner">
         <header class="header">
-            <button class="ui-button ui-button--burger"></button>
+            <button class="interaction-btn interaction-btn--burger"></button>
             <div class="header__logo logo"><a href="#" class="logo__link"><img src="img/logo/Grouplogo.svg" alt="Логотип" class="logo__img"></a></div>
             <ul class="feedback">
-                <li class="feedback__item"><button class="ui-button ui-button--call"></button></li>
-                <li class="feedback__item"><a class="ui-button ui-button--chat"></a></li>
-                <li class="feedback__item"><a class="ui-button ui-button--profile"></a></li>
+                <li class="feedback__item"><button class="interaction-btn interaction-btn--call"></button></li>
+                <li class="feedback__item"><a class="interaction-btn interaction-btn--chat"></a></li>
+                <li class="feedback__item"><a class="interaction-btn interaction-btn--profile"></a></li>
             </ul>
             <ul class="support">
-                <li class="support__item"><a class="ui-button ui-button--repair"></a></li>
-                <li class="support__item"><a class="ui-button ui-button--checkstatus"></a></li>
+                <li class="support__item"><a class="interaction-btn interaction-btn--repair"></a></li>
+                <li class="support__item"><a class="interaction-btn interaction-btn--checkstatus"></a></li>
             </ul>
         </header>
         
@@ -109,7 +108,7 @@
                 <picture>
                     <source srcset="img/cps_office_768.jpg" media="(min-width: 320px)" width="360">
                     <source scrset="img/cps_office_1120.jpg" media="(min-width: 768px)" width="532">
-                    <img src="img/cps_office_320.jpg" alt="Офис компании" width="320" height="176">
+                    <img class="article__picture" src="img/cps_office_320.jpg" alt="Офис компании" width="320" height="176">
                 </picture>
             </div>
         </article>
@@ -120,29 +119,29 @@
             <div class="section__container swiper-container">
                 <ul class="brands__list swiper-wrapper">
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/samsung.png" alt="Samsung" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/sony.svg" alt="Sony" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/viewsonic.png" alt="ViewSonic" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/hp.png" alt="HP" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/lenovo.png" alt="Lenovo" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/acer.png" alt="Acer" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/apple.png" alt="Apple" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/bosh.png" alt="Bosh" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/apple.png" alt="Apple" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/samsung.png" alt="Samsung" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/sony.svg" alt="Sony" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                     <li class="brands__item swiper-slide"><div class="logo"><a href="#" class="logo__link"><img src="img/logo/viewsonic.png" alt="ViewSonic" class="logo__img"></a></div>
-                        <button class="ui-button ui-button--togo"></button></li>
+                        <button class="interaction-btn interaction-btn--togo"></button></li>
                 </ul>
                 <div class="swiper-pagination"></div>
                 <button type="button" class="btn-read-more brands">Показать все</button>
@@ -156,31 +155,31 @@
                 <ul class="swiper-wrapper equipment__list">
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт ноутбуков</h3>
-                        <button class="ui-button ui-button--togo"></button>
+                        <button class="interaction-btn interaction-btn--togo"></button>
                     </li>
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт планшетов</h3>
-                        <button class="ui-button ui-button--togo"></button>
+                        <button class="interaction-btn interaction-btn--togo"></button>
                     </li>
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт ПК</h3>
-                        <button class="ui-button ui-button--togo"></button>
+                        <button class="interaction-btn interaction-btn--togo"></button>
                     </li>
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт  мониторов</h3>
-                        <button class="ui-button ui-button--togo"></button>
+                        <button class="interaction-btn interaction-btn--togo"></button>
                     </li>
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт  мониторов</h3>
-                        <button class="ui-button ui-button--togo"></button>
+                        <button class="interaction-btn interaction-btn--togo"></button>
                     </li>
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт  мониторов</h3>
-                        <button class="ui-button ui-button--togo"></button>
+                        <button class="interaction-btn interaction-btn--togo"></button>
                     </li>
                     <li class="swiper-slide equipment__item">
                         <h3 class="equipment__item-title">Ремонт  мониторов</h3>
-                        <button class="ui-button ui-button--togo"></button>
+                        <button class="interaction-btn interaction-btn--togo"></button>
                     </li>
                 </ul>
                 <div class="swiper-pagination"></div>
@@ -192,7 +191,7 @@
                 <h2 class="section__title">Цены на услуги</h2>
             </div>
             <div class="swiper-container section__container">
-                <div class="prices__item prices__item--no-mobile">
+                <div class="prices__item--no-mobile">
                     <span class="prices__title prices__descr-list-item">Ремонтные услуги</span>
                     <span class="prices__title prices__descr-list-item">Цена</span>
                     <span class="prices__title prices__descr-list-item">Срок</span>
@@ -208,7 +207,7 @@
                         <div class="prices__descr-list-item">
                             <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30-120 мин</p>
-                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать</button>
                         </div>
                     </li>
                     <li class="swiper-slide prices__item">
@@ -221,7 +220,7 @@
                         <div class="prices__descr-list-item">
                             <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30-120 мин</p>
-                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать</button>
                         </div>
                     </li>
                     <li class="swiper-slide prices__item">
@@ -234,7 +233,7 @@
                         <div class="prices__descr-list-item">
                             <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30-120 мин</p>
-                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать</button>
                         </div>
                     </li>
                     <li class="swiper-slide prices__item">
@@ -247,7 +246,7 @@
                         <div class="prices__descr-list-item">
                             <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30-120 мин</p>
-                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать</button>
                         </div>
                     </li>
                     <li class="swiper-slide prices__item">
@@ -260,7 +259,7 @@
                         <div class="prices__descr-list-item">
                             <p class="prices__title prices__title--mobile">Срок</p>
                             <p class="prices__descr">30 мин</p>
-                            <button class="action-button prices__button">Заказать<img src="./img/icons/chevron-single-right-white.png" alt="Открыть"></button>
+                            <button class="action-button prices__button">Заказать</button>
                         </div>
                     </li>
                     
