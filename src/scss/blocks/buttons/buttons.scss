@@ -1,5 +1,5 @@
-.ui-button {
-    background-color: $ui-buttons-fill-color;
+.interaction-btn {
+    background-color: $interaction-btns-fill-color;
     display: block;
     border: none;
     outline: none;
@@ -11,48 +11,48 @@
     cursor: pointer;
     &:hover {
         transition-duration: 300ms;
-        filter: hue-rotate(45deg) drop-shadow(0 0 0.75rem $ui-buttons-fill-color);
+        filter: hue-rotate(45deg) drop-shadow(0 0 0.75rem $interaction-btns-fill-color);
     }
 
     &--burger {
         background: no-repeat center/50% url("../img/icons/burger.png");
-        background-color: $ui-buttons-fill-color;
+        background-color: $interaction-btns-fill-color;
         
     }
 
     &--close {
         background: no-repeat center/50% url("../img/icons/close.png");
-        background-color: $ui-buttons-fill-color;
+        background-color: $interaction-btns-fill-color;
     }
 
     &--search {
         background: no-repeat center/50% url("../img/icons/search.png");
-        background-color: $ui-buttons-fill-color;
+        background-color: $interaction-btns-fill-color;
     }
 
     &--call {
         background: no-repeat center/50% url("../img/icons/call.png");
-        background-color: $ui-buttons-fill-color;
+        background-color: $interaction-btns-fill-color;
     }
 
     &--chat {
         background: no-repeat center/50% url("../img/icons/chat.png");
-        background-color: $ui-buttons-fill-color;
+        background-color: $interaction-btns-fill-color;
     }
 
     &--profile {
         background: no-repeat center/50% url("../img/icons/profile.png");
-        background-color: $ui-buttons-fill-color;
+        background-color: $interaction-btns-fill-color;
     }
 
     &--repair {
         background: no-repeat center/50% url("../img/icons/repair.png");
-        background-color: $ui-buttons-fill-color;
+        background-color: $interaction-btns-fill-color;
     }
 
     &--checkstatus {
         background: no-repeat center/50% url("../img/icons/checkstatus.png");
-        background-color: $ui-buttons-fill-color;
+        background-color: $interaction-btns-fill-color;
     }
 
     &--togo {
@@ -104,9 +104,10 @@
 
 
 .action-button {
-    background-color: $ui-buttons-fill-color;
+    background: $interaction-btns-fill-color no-repeat 82% 50%/8% url("../img/icons/chevron-single-right-white.png");
     border: none;
     outline: none;
+    padding-left: 16px;
 
     width: 119px;
     height: 32px;
@@ -115,21 +116,19 @@
 
     border-radius: 16px;
 
+
     font-family: TT Lakes;
     font-size: 12px;
     line-height: 24px;
     letter-spacing: -0.15px;
     text-transform: uppercase;
     color: white;
+    text-align: left;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-grow: 1;
     cursor: pointer;
     &:hover {
         transition-duration: 300ms;
-        filter: hue-rotate(45deg) drop-shadow(0 0 0.75rem $ui-buttons-fill-color);
+        filter: hue-rotate(45deg) drop-shadow(0 0 0.75rem $interaction-btns-fill-color);
     }
 
 }

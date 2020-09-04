@@ -4,23 +4,25 @@
     &__list {
         margin-block-start: 0;
         padding-inline-start: 0;
-        transition: all 400ms ease-in;
+        transition: height 400ms ease-in;
+        height: 110px;
 
         @media (min-width: $tablet-width) {
-            height: 190px !important;
+            height: 200px;
             overflow: hidden;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            padding-inline-end: 24px;
+            padding-block-end: 8px;
         }
 
         &--expanded {
-            height: 380px !important;
+            height: auto;
         }
     }
 
     &__item {
-        margin: 12px 12px;
+        margin-top: 16px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -29,12 +31,23 @@
         border: 1px solid $section-item-border-color;
         border-radius: 5%;
         padding: 10px 20px;
-        width: 224px !important;
+        width: 240px;
+        max-height: 160px;
         height: 72px !important;
         box-sizing: border-box;
         &:hover {
             transition-duration: 300ms;
-            filter: drop-shadow(0 0 0.75rem $ui-buttons-fill-color);
+            filter: drop-shadow(0 0 0.25rem $interaction-btns-fill-color);
+        }
+
+        @media (min-width: $tablet-width) and (max-width: $content-width) {
+            width: 224px;
+            margin-left: 24px;
+            margin-top: 24px;
+        }
+        @media (min-width: $content-width) {
+            margin-left: 32px;
+            margin-top: 24px;
         }
         
     }
@@ -48,23 +61,3 @@
         }
     }
 }
-
-// @media (min-width: $tablet-width) {
-//     .brands {
-//         // &__container {
-//         //     height: 100%;
-//         // }
-
-//         // &__list {
-//         //     height: 190px !important;
-//         //     overflow: hidden;
-//         //     display: flex;
-//         //     flex-wrap: wrap;
-//         //     justify-content: space-evenly;
-//         // }
-
-//        .btn-read-more {
-//            margin: 20px 32px;
-//        }
-//     }
-// }

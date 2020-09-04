@@ -13,6 +13,7 @@
     "dependencies": {
         "img-loader": "^3.0.1",
         "loading-attribute-polyfill": "^1.5.4",
+        "normalize.css": "^8.0.1",
         "svg-url-loader": "^6.0.0",
         "swiper": "^6.0.4",
         "url-loader": "^4.1.0"

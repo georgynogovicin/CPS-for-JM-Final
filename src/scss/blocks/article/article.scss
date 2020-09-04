@@ -22,7 +22,7 @@
         transition-duration: 400ms;
 
         @media (min-width: $tablet-width) {
-            max-height: 8em;
+            height: auto;
             overflow: hidden;
         }
         &--expanded {
@@ -58,7 +58,7 @@
         }
     }
 
-    & img {
+    &__picture {
         width: 100%;
         height: auto;
 

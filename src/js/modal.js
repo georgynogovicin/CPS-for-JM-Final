@@ -1,15 +1,15 @@
-let openMenuBtn = document.querySelector('.ui-button--burger'),
+let openMenuBtn = document.querySelector('.interaction-btn--burger'),
     menu = document.querySelector('.menu'),
-    closeMenuBtn = menu.querySelector('.ui-button--close'),
+    closeMenuBtn = menu.querySelector('.interaction-btn--close'),
     container = document.querySelector('.container'),
-    callBtn = document.querySelectorAll('.ui-button--call'),
-    feedbackBtn = document.querySelectorAll('.ui-button--chat'),
+    callBtn = document.querySelectorAll('.interaction-btn--call'),
+    feedbackBtn = document.querySelectorAll('.interaction-btn--chat'),
     modalCall = document.querySelector('.modal--call'),
     modalFeedback = document.querySelector('.modal--feedback'),
     modalActive = 'modal--active',
     menuActive = 'menu--active',
-    closeCallBtn = modalCall.querySelector('.ui-button--close'),
-    closeFeedbackBtn = modalFeedback.querySelector('.ui-button--close');
+    closeCallBtn = modalCall.querySelector('.interaction-btn--close'),
+    closeFeedbackBtn = modalFeedback.querySelector('.interaction-btn--close');
 
 
 //Open callback modal

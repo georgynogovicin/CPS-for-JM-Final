@@ -36,7 +36,6 @@ const swiperInit = function() {
             slidesOffsetAfter: 16,
             grabCursor: true,
             ally: true,
-            centeredSlides: true,
           
             
             pagination: {

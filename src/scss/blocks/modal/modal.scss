@@ -1,31 +1,36 @@
 .modal {
-    // min-width: 320px;
-    // max-width: 440px;
-    width: 0;
+    width: 320px;
     min-height: 100vh;
     box-sizing: border-box;
     position: absolute;
     z-index: -1;
     right: 0;
-    transition: width 0.5s ease-in;
+    transform: translateX(440px);
+    transition: transform 0.5s ease-in;
     background-color: $background-fill-color;
 
-    & .ui-button {
+    @media (min-width: $widescreen) {
+        width: 440px;
+    }
+
+    & .interaction-btn {
         margin-top: 24px;
         margin-left: 16px;
+        
+        @media (min-width: $widescreen) {
+            position: absolute;
+            transform: translateX(-80px);
+            z-index: 2001;
+        }
     }
 
 
 
     &--active {
-        width: 320px;
-        position: absolute;
+        transform: translateX(0);
         overflow: scroll;
         z-index: 2000;
         height: 100%;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-        @media (min-width: $content-width) {
-            width: 360px;
-        }
     }
 }

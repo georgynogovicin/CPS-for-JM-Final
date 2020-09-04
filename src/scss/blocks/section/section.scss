@@ -58,12 +58,12 @@
             top: 16px;
         }
         &:hover {
-            border: 2px solid $ui-buttons-fill-color;
+            border: 2px solid $interaction-btns-fill-color;
             border-radius: 6px;
             background-color: white;
         }
         &:active {
-            background-color: $ui-buttons-fill-color;
+            background-color: $interaction-btns-fill-color;
         }
     }
 

@@ -7,7 +7,7 @@
         position: absolute;
         transform: translateY(-320px);
     }
-    .ui-button {
+    .interaction-btn {
         margin: 0 8px;
     }
 
@@ -85,7 +85,7 @@
                 display: none;
             }
             
-            .ui-button:first-child::before {
+            .interaction-btn:first-child::before {
                 content: "Оставить заявку";
                 font-family: TT Lakes;
                 font-size: 16px;
@@ -95,7 +95,7 @@
                 position: absolute;
                 transform: translate(-80px);
             }
-            .ui-button:last-child::before {
+            .interaction-btn:last-child::before {
                 content: "Статус ремонта";
                 font-family: TT Lakes;
                 font-size: 16px;

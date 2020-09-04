@@ -5,27 +5,30 @@
         margin-block-start: 0;
         padding-inline-start: 0;
         transition-duration: 400ms;
+        height: 200px;
 
         @media (min-width: $tablet-width) {
-            height: 220px !important;
+            width: auto;
             overflow: hidden;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            padding-inline-end: 24px;
+            padding-block-end: 8px;;
         }
 
         &--expanded {
-            height: 440px !important;
+            height: auto;
         }
     }
 
     &__item {
-        max-width: 224px;
+        margin-top: 16px;
+        width: 240px;
         min-height: 160px;
         max-height: 160px;
         box-sizing: border-box;
         padding: 16px;
-        margin: 24px 12px; 
+         
 
         
         display: flex;
@@ -37,7 +40,18 @@
         border-radius: 5%;
         &:hover {
             transition-duration: 300ms;
-            filter: drop-shadow(0 0 0.75rem $ui-buttons-fill-color);
+            filter: drop-shadow(0 0 0.25rem $interaction-btns-fill-color);
+        }
+
+        @media (min-width: $tablet-width) and (max-width: $content-width) {
+            width: 224px;
+            margin-left: 24px;
+            margin-top: 24px;
+        }
+
+        @media (min-width: $content-width) {
+            margin-left: 32px;
+            margin-top: 24px;
         }
     }
     &__item-title {
@@ -61,29 +75,8 @@
         }
     }
 
-    .ui-button {
+    .interaction-btn {
         align-self: flex-end;
         justify-self: flex-end;
     }
 }
-
-// // @media (min-width: $tablet-width) {
-// //     .equipment {
-// //         &__container {
-// //             height: 100%;
-// //         }
-
-// //         &__list {
-// //             height: 200px !important;
-// //             overflow: hidden;
-// //             display: flex;
-// //             flex-wrap: wrap;
-// //             justify-content: center;
-
-// //         }
-
-//     //    .btn-read-more {
-//     //        margin: 20px 32px;
-//     //    }
-//     }
-// }

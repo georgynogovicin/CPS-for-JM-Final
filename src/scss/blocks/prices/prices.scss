@@ -5,6 +5,7 @@
         margin-block-start: 0;
         padding-inline-start: 0;
         transition-duration: 400ms;
+        height: 240px;
 
 
         @media (min-width: $tablet-width) {
@@ -12,7 +13,8 @@
             align-items: center;
             background-color: white;
             border-radius: 6px;
-            width: 95% !important;
+            height: auto;
+            width: 95%;
             margin: 0 auto;
         }
     }
@@ -22,7 +24,7 @@
         max-height: 200px;
         box-sizing: border-box;
         padding: 16px;
-        margin: 24px 12px;
+        margin-top: 16px;
         
 
         display: flex;
@@ -38,12 +40,14 @@
         &--no-mobile {
             display: none;
             padding: 31px 10px 24px 22px;
-            border-bottom: none;
             background-color: transparent;
             
 
             @media (min-width: $tablet-width) {
                 display: flex;
+                border-bottom: none;
+                margin-left: 38px;
+                width: 95%;
             }
         }
 
