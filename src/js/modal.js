@@ -12,21 +12,46 @@ let openMenuBtn = document.querySelector('.interaction-btn--burger'),
     closeFeedbackBtn = modalFeedback.querySelector('.interaction-btn--close');
 
 
-//Open callback modal
-const openModalCall = () => { 
-    modalCall.classList.add(modalActive);
+document.addEventListener('click', function(event) {
+    let target = event.target;
+
+    switch (target.getAttribute('data-modal')) {
+        case 'call': 
+        closeModal(menu, menuActive);
+        openModal(target);
+        break;
+
+        case 'feedback':
+        closeModal(menu, menuActive);
+        openModal(target);
+        break;
+
+        case 'menu':
+        openMenu();
+        break;
+    }
+});
+
+const openModal = (btn) => {
+    let targetClass = '.modal--' + btn.getAttribute('data-modal');
+    let targetElement = document.querySelector(targetClass);
+    
+    targetElement.classList.add(modalActive);
     container.classList.add('container--active');
-    window.addEventListener('keydown', closeModalCallByESC);
     window.addEventListener('click', closeModalCallByClick);
+    window.addEventListener('click', closeFeedbackByLCick);
+    window.addEventListener('keydown', closeByEsc);
 };
-// CLose by ESC keydown listener
-const closeModalCallByESC = (event) => { 
+
+const closeByEsc = (event) => {
     if (event.keyCode === 27) {
-        window.removeEventListener('keydown', closeModalCallByESC);
+        closeModal(menu, menuActive);
         closeModal(modalCall, modalActive);
+        closeModal(modalFeedback, modalActive);
     }
 };
-//Close by click listener
+
+//Close modal call by click handler
 const closeModalCallByClick = (event) => { 
     if (event.target === container || event.target === closeCallBtn) {
         window.removeEventListener('click', closeModalCallByClick);
@@ -34,21 +59,9 @@ const closeModalCallByClick = (event) => {
     }
 };
 
-//OPen feedback modal
-const openModalFeedback = () => { 
-    modalFeedback.classList.add(modalActive);
-    container.classList.add('container--active');
-    window.addEventListener('keydown', closeFeedbackByESC);
-    window.addEventListener('click', closeFeedbackByLCick);
-};
-// CLose by ESC keydown listener
-const closeFeedbackByESC = (event) => { 
-    if (event.keyCode === 27) {
-        window.removeEventListener('keydown', closeFeedbackByESC);
-        closeModal(modalFeedback, modalActive);
-    }
-};
-//Close by click listener
+
+
+//Close modal feedback by click handler
 const closeFeedbackByLCick = (event) => { 
     if (event.target === container || event.target === closeFeedbackBtn) {
         window.removeEventListener('click', closeFeedbackByLCick);
@@ -60,17 +73,11 @@ const closeFeedbackByLCick = (event) => {
 const openMenu = () => {  
     menu.classList.add('menu--active');
     container.classList.add('container--active');
-    window.addEventListener('keydown', closeMenuByESC);
+    window.addEventListener('keydown', closeByEsc);
     window.addEventListener('click', closeMenuByClick);
 };
-//Close by ESC keydown listener
-const closeMenuByESC = (event) => { 
-    if (event.keyCode === 27) {
-        window.removeEventListener('keydown', closeMenuByESC);
-        closeModal(menu, menuActive);
-    }
-};
-//Close by click listener
+
+//Close menu by click listener
 const closeMenuByClick = (event) => { 
     if (event.target === container || event.target === closeMenuBtn) {
         window.removeEventListener('click', closeMenuByClick);
@@ -78,48 +85,18 @@ const closeMenuByClick = (event) => {
     }
 };
 //Close any modal(bl - block, cl - active class)
-const closeModal = (bl, cl) => { 
-    bl.classList.remove(cl);
+const closeModal = (element, cl) => { 
+    element.classList.remove(cl);
     container.classList.remove('container--active');
 };
 
 
-document.addEventListener('click', function(event) {
-    let target = event.target;
 
-    switch (target.getAttribute('data-modal')) {
-        case 'call': 
-        closeModal(menu, menuActive);
-        openModalCall();
-        break;
 
-        case 'feedback':
-        closeModal(menu, menuActive);
-        openModalFeedback();
-        break;
 
-        case 'menu':
-        openMenu();
-        break;
-    }
-});
-// document.addEventListener('keydown', function(event) {
-//     if (event.keycode === 27) {
-//         closeModal(menu, menuActive);
-//         closeModal(modalCall, modalActive);
-//         closeModal(modalFeedback, modalActive);
-//     }
-// });
 
-// const closeByEsc = (event) => {
-//     document.addEventListener('keydown', function(event) {
-//         if (event.keycode === 27) {
-//             closeModal(menu, menuActive);
-//             closeModal(modalCall, modalActive);
-//             closeModal(modalFeedback, modalActive);
-//         }
-//     })
-// };
+
+
 
 
  
