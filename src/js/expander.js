@@ -1,37 +1,40 @@
-let article = document.querySelector('.article'),
-    brands = document.querySelector('.brands'),
-    equipment = document.querySelector('.equipment');
+let articleBtnInner = 'Читать далее',
+    sectionBtnInner = 'Показать все',
+    expandedBtnInner = 'Свернуть';
 
-article.querySelector('.btn-read-more').addEventListener('click', function() {
-    if (this.textContent === 'Свернуть') {
-        this.textContent = 'Читать далее';
-    } else {
-        this.textContent = 'Свернуть';
+document.addEventListener('click', function (event) {
+    let target = event.target;
+
+    switch (target.getAttribute('data-expander')) {
+        case 'article':
+        expander(target);
+        innerChanger(target, articleBtnInner);
+        break;
+
+        case 'brands':
+        expander(target);
+        innerChanger(target, sectionBtnInner);
+        break;
+
+        case 'equipment':
+        expander(target);
+        innerChanger(target, sectionBtnInner);
+        break;
     }
-    this.classList.toggle('btn-read-more--active');
-    article.querySelector('.article__wrapper').classList.toggle('article__wrapper--expanded');
-
 });
 
+const expander = (btn) => {
+    let targetClass = '.' + btn.getAttribute('data-expander') + '__list',
+        targetActiveClass = targetClass.substring(1) + '--expanded';
+    
+    document.querySelector(targetClass).classList.toggle(targetActiveClass);
+    btn.classList.toggle('btn-read-more--active');
+};
 
-brands.querySelector('.btn-read-more').addEventListener('click', function() {
-    if (this.textContent === 'Свернуть') {
-        this.textContent = 'Показать все';
+const innerChanger = (btn, inner) => {
+    if (btn.textContent === inner) {
+        btn.textContent = expandedBtnInner;
     } else {
-        this.textContent = 'Свернуть';
+        btn.textContent = inner;
     }
-    this.classList.toggle('btn-read-more--active');
-    brands.querySelector('.brands__list').classList.toggle('brands__list--expanded');
-
-});
-
-equipment.querySelector('.btn-read-more').addEventListener('click', function() {
-    if (this.textContent === 'Свернуть') {
-        this.textContent = 'Показать все';
-    } else {
-        this.textContent = 'Свернуть';
-    }
-    this.classList.toggle('btn-read-more--active');
-    equipment.querySelector('.equipment__list').classList.toggle('equipment__list--expanded');
-
-});
+};

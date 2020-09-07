@@ -31,8 +31,8 @@
             </main>
             <footer class="menu__footer">
                 <ul class="feedback">
-                    <li class="feedback__item"><button class="interaction-btn interaction-btn--call"></button></li>
-                    <li class="feedback__item"><button class="interaction-btn interaction-btn--chat"></button></li>
+                    <li class="feedback__item"><button class="interaction-btn interaction-btn--call" data-modal="call"></button></li>
+                    <li class="feedback__item"><button class="interaction-btn interaction-btn--chat" data-modal="feedback"></button></li>
                     <li class="feedback__item"><button class="interaction-btn interaction-btn--profile"></button></li>
                 </ul>
                 <div class="menu__contacts">
@@ -70,16 +70,16 @@
         
         <div class="container__inner">
         <header class="header">
-            <button class="interaction-btn interaction-btn--burger"></button>
+            <button class="interaction-btn interaction-btn--burger" data-modal="menu"></button>
             <div class="header__logo logo"><a href="#" class="logo__link"><img src="img/logo/Grouplogo.svg" alt="Логотип" class="logo__img"></a></div>
             <ul class="feedback">
-                <li class="feedback__item"><button class="interaction-btn interaction-btn--call"></button></li>
-                <li class="feedback__item"><a class="interaction-btn interaction-btn--chat"></a></li>
-                <li class="feedback__item"><a class="interaction-btn interaction-btn--profile"></a></li>
+                <li class="feedback__item"><button class="interaction-btn interaction-btn--call" data-modal="call"></button></li>
+                <li class="feedback__item"><button class="interaction-btn interaction-btn--chat" data-modal="feedback"></иг></li>
+                <li class="feedback__item"><button class="interaction-btn interaction-btn--profile"></иг></li>
             </ul>
             <ul class="support">
-                <li class="support__item"><a class="interaction-btn interaction-btn--repair"></a></li>
-                <li class="support__item"><a class="interaction-btn interaction-btn--checkstatus"></a></li>
+                <li class="support__item"><button class="interaction-btn interaction-btn--repair"></иг></li>
+                <li class="support__item"><button class="interaction-btn interaction-btn--checkstatus"></иг></li>
             </ul>
         </header>
         
@@ -98,12 +98,12 @@
         
         <article class="article">
             <div class="article__text">
-                <div class="article__wrapper">
+                <div class="article__list">
                     <p class="article__paragraph">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                    <p class="article__paragraph">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                    <p class="article__paragraph">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus culpa nulla iste laudantium dicta? Similique vero saepe praesentium pariatur ullam ab distinctio eos, sequi veniam, cupiditate ex atque mollitia amet? Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, ratione cumque numquam modi a officia id minus quis quasi doloribus libero sapiente aliquam repudiandae vitae, laboriosam nesciunt doloremque, veritatis voluptas!</p>
                 </div>
                 <br>
-                <button type="button" class="btn-read-more article" id="article-expander">Читать далее</button>
+                <button type="button" class="btn-read-more article" data-expander='article'>Читать далее</button>
             </div>
             <div class="article__image">
                 <picture>
@@ -145,7 +145,7 @@
                         <button class="interaction-btn interaction-btn--togo"></button></li>
                 </ul>
                 <div class="swiper-pagination"></div>
-                <button type="button" class="btn-read-more brands">Показать все</button>
+                <button type="button" class="btn-read-more brands" data-expander="brands">Показать все</button>
             </div>
         </section>
         <section class="section equipment">
@@ -184,7 +184,7 @@
                     </li>
                 </ul>
                 <div class="swiper-pagination"></div>
-                <button type="button" class="btn-read-more equipment" id="equipment-expand-btn">Показать все</button>
+                <button type="button" class="btn-read-more equipment" data-expander="equipment">Показать все</button>
             </div>
         </section>
         <section class="section prices">

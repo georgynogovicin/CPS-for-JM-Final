@@ -84,36 +84,42 @@ const closeModal = (bl, cl) => {
 };
 
 
+document.addEventListener('click', function(event) {
+    let target = event.target;
 
-
-
-
-
-
-
-//Open callback btn listener
-callBtn.forEach(function(item) { 
-    item.addEventListener('click', function () {
+    switch (target.getAttribute('data-modal')) {
+        case 'call': 
         closeModal(menu, menuActive);
-        modalCall.classList.add(modalActive);
-        container.classList.add('container--active');
-        modalCall.querySelector('input').focus({preventScroll:true});
-        window.addEventListener('keydown', closeModalCallByESC);
-        window.addEventListener('click', closeModalCallByClick);
-        
-    })
-});
-//Open feedback btn listener
-feedbackBtn.forEach(function(item) { 
-    item.addEventListener('click', function () {
+        openModalCall();
+        break;
+
+        case 'feedback':
         closeModal(menu, menuActive);
-        modalFeedback.classList.add(modalActive);
-        container.classList.add('container--active');
-        modalFeedback.querySelector('.form__input').focus({preventScroll:true});
-        window.addEventListener('keydown', closeFeedbackByESC);
-        window.addEventListener('click', closeFeedbackByLCick);
-        
-    })
+        openModalFeedback();
+        break;
+
+        case 'menu':
+        openMenu();
+        break;
+    }
 });
-//OPen side-menu btn listener
-openMenuBtn.addEventListener('click', openMenu); 
+// document.addEventListener('keydown', function(event) {
+//     if (event.keycode === 27) {
+//         closeModal(menu, menuActive);
+//         closeModal(modalCall, modalActive);
+//         closeModal(modalFeedback, modalActive);
+//     }
+// });
+
+// const closeByEsc = (event) => {
+//     document.addEventListener('keydown', function(event) {
+//         if (event.keycode === 27) {
+//             closeModal(menu, menuActive);
+//             closeModal(modalCall, modalActive);
+//             closeModal(modalFeedback, modalActive);
+//         }
+//     })
+// };
+
+
+ 

@@ -16,23 +16,14 @@
         }
     }
 
-    &__wrapper {
-        max-height: 4em;
+    &__list {
+        height: 4em;
         overflow: hidden;
-        transition-duration: 400ms;
+        transition: height 400ms ease-in;
 
-        @media (min-width: $tablet-width) {
-            height: auto;
-            overflow: hidden;
-        }
         &--expanded {
-            transition-duration: 400ms;
-            max-height: 16em;
-
-            @media (min-width: $tablet-width) {
-                transition-duration: 400ms;
-                max-height: 16em;
-            }
+            // transition-duration: 400ms;
+            height: auto;
         }
     }
 
