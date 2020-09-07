@@ -4,8 +4,9 @@
     &__list {
         margin-block-start: 0;
         padding-inline-start: 0;
-        transition: height 400ms ease-in;
         height: 110px;
+        transition: height 1s ease-in;
+
 
         @media (min-width: $tablet-width) {
             height: 200px;

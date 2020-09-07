@@ -22,7 +22,6 @@
         transition: height 400ms ease-in;
 
         &--expanded {
-            // transition-duration: 400ms;
             height: auto;
         }
     }

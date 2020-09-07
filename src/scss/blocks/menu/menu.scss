@@ -13,10 +13,12 @@
     padding: 24px 16px;
 
     &--active {
+        position: fixed;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
         transform: translateX(0);
         z-index: 1000;
         height: 100%;
+        overflow: scroll;
     }
 
     @media (min-width: $widescreen) {

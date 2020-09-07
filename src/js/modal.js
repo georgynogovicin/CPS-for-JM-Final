@@ -38,6 +38,7 @@ const openModal = (btn) => {
     
     targetElement.classList.add(modalActive);
     container.classList.add('container--active');
+    targetElement.querySelector('.form__input').focus()
     window.addEventListener('click', closeModalCallByClick);
     window.addEventListener('click', closeFeedbackByLCick);
     window.addEventListener('keydown', closeByEsc);
@@ -48,6 +49,7 @@ const closeByEsc = (event) => {
         closeModal(menu, menuActive);
         closeModal(modalCall, modalActive);
         closeModal(modalFeedback, modalActive);
+        window.removeEventListener('keydown', closeByEsc);
     }
 };
 
